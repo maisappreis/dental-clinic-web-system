@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black-color: black;
+  --gray-dark-color: rgb(58, 58, 58);
+  --gray-light-color: rgb(228, 228, 228);
+  --red-dark-color: rgb(178, 15, 15);
+  --red-light-color: rgb(239, 182, 182);
+  --blue-light-color: rgb(207, 217, 254);
+  --blue-dark-color: rgb(1, 32, 144);
+  --blue-darker-color: rgb(0, 14, 63);
+  font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.app-area {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--gray-light-color);
+}
