@@ -1,7 +1,7 @@
 import Logotype from "./logotype";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChartLine, faCalendar, faHandHoldingDollar, faMoneyBillTransfer, faBook } from '@fortawesome/free-solid-svg-icons';
-import "./layout.css";
+import style from "./styles/Sidebar.module.css";
 
 export default function Sidebar({ onOptionClick }: {onOptionClick: (option: string) => void}) {
   const handleOptionClick = (option: string) => {
@@ -9,28 +9,28 @@ export default function Sidebar({ onOptionClick }: {onOptionClick: (option: stri
   };
 
   return (
-      <aside className="sidebar-area">
+      <aside className={style.sidebar}>
         <Logotype />
         <ul>
-          <li className="option" onClick={() => handleOptionClick("calendar")}>
-            <FontAwesomeIcon icon={faCalendar} className="sidebar-icon"/>
-            <span className="option-text">Agenda</span>
+          <li className={style.option} onClick={() => handleOptionClick("calendar")}>
+            <FontAwesomeIcon icon={faCalendar} className={style.icon}/>
+            <span className={style.text}>Agenda</span>
           </li>
-          <li className="option" onClick={() => handleOptionClick("dashboard")}>
-            <FontAwesomeIcon icon={faChartLine} className="sidebar-icon" />
-            <span className="option-text">Métricas</span>
+          <li className={style.option} onClick={() => handleOptionClick("dashboard")}>
+            <FontAwesomeIcon icon={faChartLine} className={style.icon} />
+            <span className={style.text}>Métricas</span>
           </li>
-          <li className="option" onClick={() => handleOptionClick("revenue")}>
-            <FontAwesomeIcon icon={faHandHoldingDollar} className="sidebar-icon"/>
-            <span className="option-text">Receitas</span>
+          <li className={style.option} onClick={() => handleOptionClick("revenue")}>
+            <FontAwesomeIcon icon={faHandHoldingDollar} className={style.icon}/>
+            <span className={style.text}>Receitas</span>
           </li>
-          <li className="option" onClick={() => handleOptionClick("expense")}>
-            <FontAwesomeIcon icon={faMoneyBillTransfer} className="sidebar-icon"/>
-            <span className="option-text">Despesas</span>
+          <li className={style.option} onClick={() => handleOptionClick("expense")}>
+            <FontAwesomeIcon icon={faMoneyBillTransfer} className={style.icon}/>
+            <span className={style.text}>Despesas</span>
           </li>
-          <li className="option" onClick={() => handleOptionClick("monthEndClosing")}>
-            <FontAwesomeIcon icon={faBook} className="sidebar-icon"/>
-            <span className="option-text">Caixa Mensal</span>
+          <li className={style.option} onClick={() => handleOptionClick("monthEndClosing")}>
+            <FontAwesomeIcon icon={faBook} className={style.icon}/>
+            <span className={style.text}>Caixa Mensal</span>
           </li>
         </ul>
     </aside >

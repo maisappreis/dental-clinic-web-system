@@ -1,0 +1,108 @@
+.table {
+    width: 97%;
+    border-collapse: collapse;
+    margin: 20px;
+}
+
+.th,
+.td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.th {
+    background-color: var(--blue-dark-color);
+    color: white;
+}
+
+.tr:nth-child(even) {
+    background-color: #eeeded;
+}
+
+.tr:hover {
+    background-color: var(--red-light-color);
+}
+
+.icon {
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.status {
+    color: white;
+    padding: 3px 10px;
+    border-radius: 8px;
+}
+
+.paid {
+    cursor: pointer;
+}
+
+.active {
+    background-color: green;
+}
+
+.inactive {
+    background-color: red;
+}
+
+.sent {
+    background-color: orange;
+}
+
+.pagination-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.pagination-button {
+    background-color: var(--red-dark-color);
+    color: white;
+    border: none;
+    padding: 5px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.pagination-button:hover,
+.pagination-button.active {
+    background-color: red;
+}
+
+.no-results {
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.total-items {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.pagination-items {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 10px;
+}
+
+.checkbox {
+    transform: scale(1.5);
+    margin-right: 5px;
+}
+
+.align-right {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+}

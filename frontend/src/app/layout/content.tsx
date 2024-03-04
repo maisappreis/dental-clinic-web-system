@@ -5,7 +5,7 @@ import Dashboard from "@/app/pages/dashboard/page";
 import Revenue from "@/app/pages/revenue/page";
 import Expense from "@/app/pages/expense/page";
 import MonthEndClosing from "@/app/pages/month-end-closing/page";
-import "./layout.css";
+import style from "./styles/Content.module.css";
 
 export default function Content({ selectedOption }: { selectedOption: string}) {
   let contentComponent: React.ReactNode;
@@ -32,7 +32,7 @@ export default function Content({ selectedOption }: { selectedOption: string}) {
   }
 
   return (
-    <div className="content-area">
+    <div className={style.content}>
       {contentComponent}
 
 
