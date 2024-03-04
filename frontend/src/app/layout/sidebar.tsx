@@ -30,7 +30,7 @@ export default function Sidebar({ onOptionClick }: {onOptionClick: (option: stri
           </li>
           <li className="option" onClick={() => handleOptionClick("monthEndClosing")}>
             <FontAwesomeIcon icon={faBook} className="sidebar-icon"/>
-            <span className="option-text">Fec. de caixa</span>
+            <span className="option-text">Caixa Mensal</span>
           </li>
         </ul>
     </aside >
