@@ -21,7 +21,7 @@
 }
 
 .tr:hover {
-    background-color: var(--red-light-color);
+    background-color: var(--blue-light-color);
 }
 
 .icon {
