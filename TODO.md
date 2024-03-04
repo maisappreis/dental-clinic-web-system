@@ -1,7 +1,7 @@
 
 ## TODO List:
 
-> Trocar a fonte do app
+> Botão do menu não está ficando selecionado
 >
 > https://nextjs.org/docs/app/building-your-application/routing/linking-and-navigating
 
