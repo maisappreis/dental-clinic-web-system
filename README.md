@@ -8,6 +8,8 @@ This web application was developed to manage a dental clinic.
 - TypeScript
 - Django
 
+![image](https://github.com/maisappreis/dental-clinic-web-system/assets/113925909/853387a9-5fe0-44cd-ada2-0d846286dd20)
+
 
 ## 🌱 On Frontend Development
 
