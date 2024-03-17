@@ -1,4 +1,6 @@
 import styles from './styles/Table.module.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenToSquare, faTrashCan, faCircleInfo, faCheck, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 interface Data {
   [key: string]: any;
@@ -13,6 +15,11 @@ interface TableProps {
   columns: Columns[];
   data: Data[];
 }
+
+const formatDate = (dateString: string): string => {
+  const [year, month, day] = dateString.split('-');
+  return `${day}/${month}/${year}`;
+};
 
 export default function Table({ columns, data }: TableProps) {
   return (
@@ -31,7 +38,26 @@ export default function Table({ columns, data }: TableProps) {
               <tr className={styles.tr} key={rowIndex}>
                 {columns.map((column, colIndex) => (
                   <td className={styles.td} key={colIndex}>
-                    {row[column.key]}
+                    {column.key === 'value' ?
+                      `R$ ${parseFloat(row[column.key]).toFixed(2).replace('.', ',')}`
+                      : column.key === 'actions' ?
+                      <div>
+                        <FontAwesomeIcon icon={faCircleInfo} className={styles.icon} />
+                        <FontAwesomeIcon icon={faPenToSquare} className={styles.icon}  />
+                        <FontAwesomeIcon icon={faTrashCan} className={styles.icon}  />
+                      </div>
+                      : column.key === 'nf' ?
+                      <div>
+                        {
+                          (row[column.key] ? 
+                          <FontAwesomeIcon icon={faCheck} className={styles.icon} /> :
+                          <FontAwesomeIcon icon={faXmark} className={styles.icon} />
+                          )
+                        }
+                      </div>
+                      : column.key === 'date' ?
+                      formatDate(row[column.key])
+                      :row[column.key]}
                   </td>
                 ))}
               </tr>

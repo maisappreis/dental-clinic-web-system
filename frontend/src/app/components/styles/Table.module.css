@@ -9,11 +9,13 @@
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    text-align: center;
 }
 
 .th {
     background-color: var(--blue-dark-color);
     color: white;
+    text-align: center;
 }
 
 .tr:nth-child(even) {
@@ -50,6 +52,10 @@
 
 .sent {
     background-color: orange;
+}
+
+.icon {
+    margin: 0 5px;
 }
 
 .pagination-area {
