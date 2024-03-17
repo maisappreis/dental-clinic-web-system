@@ -5,9 +5,9 @@ export default function Appointments({ time, appointments }) {
       <>
         <div className={`${styles.schedule} ${styles.blue}`}>{time}</div>
         {appointments.map((appointment, index) => (
-          <div key={index} className={`${styles.schedule} ${styles.graylight}`}>
+          <button key={index} className={`${styles.schedule} ${styles.graylight}`}>
             {appointment}
-          </div>
+          </button>
         ))}
       </>
     );
