@@ -55,8 +55,14 @@ export default function Table({ columns, data }: TableProps) {
                           )
                         }
                       </div>
-                      : column.key === 'date' ?
+                      : column.key === 'date' || column.key === 'dueDate' ?
                       formatDate(row[column.key])
+                      : column.key === 'status' ?
+                      <button
+                        className={`${styles.status} ${row[column.key] ? styles.paid : styles.pay}`}
+                        >
+                        { row[column.key] ? "Pago" : "À pagar"}
+                      </button>
                       :row[column.key]}
                   </td>
                 ))}

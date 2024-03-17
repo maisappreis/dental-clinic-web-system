@@ -28,35 +28,24 @@
 }
 
 .icon {
-    font-size: 20px;
-    margin: 0 10px;
+    margin: 0 5px;
     cursor: pointer;
+    font-size: 20px;
 }
 
 .status {
     color: white;
     padding: 3px 10px;
     border-radius: 8px;
+    font-size: 16px;
 }
 
 .paid {
-    cursor: pointer;
-}
-
-.active {
     background-color: green;
 }
 
-.inactive {
+.pay {
     background-color: red;
-}
-
-.sent {
-    background-color: orange;
-}
-
-.icon {
-    margin: 0 5px;
 }
 
 .pagination-area {
