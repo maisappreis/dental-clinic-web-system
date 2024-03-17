@@ -1,0 +1,37 @@
+.week {
+    font-weight: bold;
+    padding: 5px 30px;
+    text-align: center;
+    border-radius: 30px;
+    font-size: 17px;
+}
+
+.blue {
+    background-color: var(--blue-dark-color);
+    color: white;
+}
+
+.bluedark {
+    background-color: var(--blue-darker-color);
+    color: white;
+}
+
+.lightblue {
+    background-color: var(--blue-light-color);
+}
+
+.gray {
+    background-color: var(--gray-dark-color);
+}
+
+.graylight {
+    background-color: var(--gray-light-color);
+    color: black;
+    font-size: 16px;
+}
+
+.schedule {
+    text-align: center;
+    padding: 6px 0;
+    border-radius: 30px;
+}
