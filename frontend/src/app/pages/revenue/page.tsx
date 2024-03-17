@@ -1,6 +1,12 @@
 import Table from "@/app/components/table";
+import Button from "@/app/components/button";
 
 export default function Revenue() {
+
+  const handleAction: () => void = () => {
+    console.log('Action executed!');
+  };
+
   const columns: { key: string; name: string; }[] = [
     { key: "date", name: "Data" },
     { key: "name", name: "Paciente" },
@@ -36,6 +42,9 @@ export default function Revenue() {
 
   return (
     <div className="content">
+      <Button onClick={handleAction} disabled={false} >
+        Nova Receita
+      </Button>
       <Table columns={columns} data={data} />
     </div>
   )

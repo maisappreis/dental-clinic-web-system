@@ -1,20 +1,25 @@
 'use client';
 
-import { useState } from 'react';
-import Dashboard from '@/app/pages/dashboard/page';
+import styles from './styles/Button.module.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
-export default function Button({ label }: { label: string }) {
-  const [showPage, setShowPage] = useState(false);
+interface ButtonProps {
+  onClick: () => void;
+  disabled?: boolean;
+  children: React.ReactNode;
+}
 
-  const handleButtonClick = () => {
-    setShowPage(!showPage);
-  };
-
+export default function Button({ onClick, disabled, children }: ButtonProps) {
   return (
     <div>
-        <button className="button-area" onClick={handleButtonClick}>{label}
-          {showPage && <Dashboard />}
-          {/* <Dashboard /> */}
+        <button
+          className={`${styles.button} ${disabled ? styles.disabled : styles.green}`}
+          onClick={onClick}
+          disabled={disabled}
+        >
+          <FontAwesomeIcon icon={faPlus} className={styles.icon} />
+          {children}
         </button>
     </div>
   );
