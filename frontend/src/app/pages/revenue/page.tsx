@@ -1,5 +1,6 @@
 import Table from "@/app/components/table";
 import Button from "@/app/components/button";
+import Filter from "@/app/components/filter";
 
 export default function Revenue() {
 
@@ -42,9 +43,12 @@ export default function Revenue() {
 
   return (
     <div className="content">
-      <Button onClick={handleAction} disabled={false} >
-        Nova Receita
-      </Button>
+      <div className="flex flex-column justify-between">
+        <Button onClick={handleAction} disabled={false} >
+          Nova Receita
+        </Button>
+        <Filter />
+      </div>
       <Table columns={columns} data={data} />
     </div>
   )
