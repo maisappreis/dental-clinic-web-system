@@ -1,3 +1,9 @@
+.grid {
+    display: grid;
+    grid-template-columns: auto repeat(6, 1fr);
+    gap: 10px; 
+}
+
 .week {
     font-weight: bold;
     padding: 5px 30px;
@@ -11,13 +17,19 @@
     color: white;
 }
 
-.bluedark {
+.header {
     background-color: var(--blue-darker-color);
     color: white;
+    display: flex;
+    flex-direction: column;
 }
 
-.lightblue {
+.time {
     background-color: var(--blue-light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
 }
 
 .gray {
@@ -31,8 +43,20 @@
     cursor: pointer;
 }
 
+.graylight:hover {
+    background-color: var(--blue-light-color);
+}
+
 .schedule {
     text-align: center;
-    padding: 6px 0;
+    padding: 6px 15px;
     border-radius: 30px;
+}
+
+.info {
+    margin: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    color: black;
+    width: 20px;
 }
