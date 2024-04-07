@@ -102,3 +102,13 @@
     justify-content: flex-end;
     margin-right: 15px;
 }
+
+.none {
+    font-size: 20px;
+    background-color: var(--red-light-color);
+    font-weight: bold;
+    margin: 70px 20px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
