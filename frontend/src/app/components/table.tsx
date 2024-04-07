@@ -1,3 +1,5 @@
+"use client";
+import React, { useState, useEffect } from "react";
 import styles from './styles/Table.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare, faTrashCan, faCircleInfo, faCheck, faXmark } from '@fortawesome/free-solid-svg-icons';
@@ -14,6 +16,7 @@ interface Columns {
 interface TableProps {
   columns: Columns[];
   data: Data[];
+  searchedNames: String[];
 }
 
 const formatDate = (dateString: string): string => {
@@ -21,7 +24,30 @@ const formatDate = (dateString: string): string => {
   return `${day}/${month}/${year}`;
 };
 
-export default function Table({ columns, data }: TableProps) {
+export default function Table({ columns, data, searchedNames }: TableProps) {
+  const [filteredData, setFilteredData] = useState<Data[]>([])
+
+  useEffect(() => {
+    const sorted = [...data].sort((a, b) => {
+      const dateA: Date = new Date(a.date);
+      const dateB: Date = new Date(b.date);
+      return dateA.getTime() - dateB.getTime();
+    });
+
+    if (searchedNames.length === 0) {
+      setFilteredData(sorted);
+    } else {
+      const filterData = sorted.filter(item => {
+        return searchedNames.some(element => {
+          const searchedFieldName = element.toLowerCase();
+          const listedFieldName = item.name.toLowerCase();
+          return listedFieldName.includes(searchedFieldName);
+        });
+      });
+      setFilteredData(filterData);
+    }
+  }, [data, searchedNames]);
+
   return (
     <div>
       <div>
@@ -34,7 +60,7 @@ export default function Table({ columns, data }: TableProps) {
             </tr>
           </thead>
           <tbody>
-            {data.map((row, rowIndex) => (
+            {filteredData.map((row: any, rowIndex: number) => (
               <tr className={styles.tr} key={rowIndex}>
                 {columns.map((column, colIndex) => (
                   <td className={styles.td} key={colIndex}>
