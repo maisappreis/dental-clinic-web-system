@@ -1,5 +1,5 @@
 "use client";
-import styles from "./styles/MonthFilter.module.css";
+import styles from "./styles/Filter.module.css";
 import React, { useState, ChangeEvent  } from "react";
 
 export default function Filter() {
