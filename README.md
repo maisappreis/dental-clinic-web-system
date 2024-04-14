@@ -1,4 +1,4 @@
-# Desktop Application for a Dental Clinic
+# Web Application for a Dental Clinic
 
 This web application was developed to manage a dental clinic.
 
