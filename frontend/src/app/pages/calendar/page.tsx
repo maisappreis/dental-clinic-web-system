@@ -10,8 +10,7 @@ const daysOfWeek = [
   { dayWeek: "Sáb", day: "23/03" },
 ];
 
-// TODO: Receber o nome completo do backend, e criar funcão para
-// adiconar nome abreviado.
+// TODO: Receive the full name from the backend, and create a function to add a short name.
 
 const appointments = [
   { time: "09:00", appointments: ["", "", "Luis Silva", "", "Amanda L.", ""] },
@@ -21,7 +20,7 @@ const appointments = [
   { time: "14:00", appointments: ["", "", "", "", "", ""] },
   { time: "15:00", appointments: ["", "", "Luis Silva", "", "Amanda L.", ""] },
   { time: "16:00", appointments: ["", "José", "", "", "Lopes", ""] },
-  { time: "17:00", appointments: ["", "", "Maisa P. Preis", "", "André Lopes", ""] },
+  { time: "17:00", appointments: ["", "", "Maisa Preis", "", "André Lopes", ""] },
   { time: "18:00", appointments: ["", "", "", "", "Bia", ""] },
 ]
 
@@ -29,9 +28,9 @@ export default function Calendar() {
   return (
     <div className="content">
       <div className={styles.grid}>
-        <div className={`${styles.week} ${styles.time}`}>Horários</div>
+        <div className={`${styles.week} ${styles.time} ${styles.font}`}>Horários</div>
         {daysOfWeek.map((day, index) => (
-          <div key={index} className={`${styles.week} ${styles.header}`}>
+          <div key={index} className={`${styles.week} ${styles.header} ${styles.font}`}>
             <span>{day.dayWeek}</span>
             <span>{day.day}</span>
           </div>
